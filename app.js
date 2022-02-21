@@ -16,7 +16,7 @@ window.onload = function () {
 
     //Função chamada no momento da conexão do cliente-servidor
     socket.onopen = (evt) => {
-        socketStatus.innerHTML = "Conectando ao servidor " + evt.currentTarget.url;
+        socketStatus.innerHTML = "Conectado ao servidor " + evt.currentTarget.url;
         socketStatus.className = "open";
     }
 
@@ -32,7 +32,7 @@ window.onload = function () {
         socketStatus.innerHTML = "Websocket desconectado.";
         socketStatus.className = "closed";
     }
-
+``
     //Função que envia mensagens para o servidor através da conexão WebSocket
     form.onsubmit = (e) => {
         e.preventDefault();
